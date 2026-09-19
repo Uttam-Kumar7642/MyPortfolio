@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 22rem;
+  --font-display: "Anton", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-ink: #f3f2f0;
+  --color-bg: #08070a;
+  --color-bg-alt: #0f0d11;
+  --color-card: #141115;
+  --color-border: #262229;
+
+  --color-red-500: #ef1a2c;
+  --color-red-600: #d40f22;
+  --color-red-700: #a80d1d;
+  --color-red-800: #7a0a15;
+  --color-red-900: #4a0710;
+  --color-red-950: #2b040a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+.font-mono-tag {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+}
+
+::selection {
+  background-color: var(--color-red-600);
+  color: #fff;
+}
+
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 1.25rem;
+}
+
+/* Dot-grid cinematic background texture */
+.dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.red-glow {
+  text-shadow: 0 0 30px rgba(239, 26, 44, 0.55), 0 0 70px rgba(239, 26, 44, 0.25);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.55;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2.4s ease-in-out infinite;
+  }
+
+  @keyframes float-bob {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(calc(var(--drift, 14px) * -1)) rotate(8deg);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-pulse-glow {
+    animation: none;
+  }
+
+  span[style*="float-bob"] {
+    animation: none !important;
+  }
+}
+
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-red-500);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
