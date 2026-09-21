@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { navLinks, profile } from "../data/content";
-import FloatingShape from "./FloatingShape";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -21,27 +20,6 @@ export default function Navbar() {
           : "border-transparent bg-transparent"
       }`}
     >
-      <FloatingShape
-        variant="diamond"
-        size={12}
-        color="#ef1a2c"
-        opacity={0.5}
-        duration={5}
-        drift={5}
-        outline
-        style={{ top: "14px", left: "58px" }}
-      />
-      <FloatingShape
-        variant="hexagon"
-        size={10}
-        color="#ef1a2c"
-        opacity={0.35}
-        duration={6}
-        delay={1.2}
-        drift={4}
-        style={{ top: "10px", right: "160px" }}
-        className="hidden lg:block"
-      />
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 md:px-8">
         <a href="#home" className="flex items-center gap-2">
           <span className="font-display text-[15px] tracking-wide text-ink">

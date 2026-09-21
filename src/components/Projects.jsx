@@ -5,7 +5,6 @@ import { projects, episodes } from "../data/content";
 import Reveal from "./Reveal";
 import { RevealGroup, RevealItem } from "./Reveal";
 import TiltCard from "./TiltCard";
-import FloatingShape from "./FloatingShape";
 
 const stackIcon = {
   react: FaReact,
@@ -20,27 +19,6 @@ const stackIcon = {
 export default function Projects() {
   return (
     <section id="projects" className="dot-grid relative overflow-hidden bg-[#08070a] py-14 sm:py-20">
-      <FloatingShape
-        variant="diamond"
-        size={24}
-        color="#a80d1d"
-        opacity={0.3}
-        duration={6.5}
-        drift={14}
-        style={{ top: "5%", right: "3%" }}
-        className="hidden md:block"
-      />
-      <FloatingShape
-        variant="circle"
-        size={18}
-        color="#ef1a2c"
-        opacity={0.3}
-        duration={8}
-        delay={1}
-        drift={12}
-        style={{ bottom: "8%", left: "4%" }}
-        className="hidden md:block"
-      />
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal className="flex flex-col items-center gap-4 text-center sm:flex-row sm:flex-wrap sm:items-end sm:justify-between sm:text-left">
           <div>

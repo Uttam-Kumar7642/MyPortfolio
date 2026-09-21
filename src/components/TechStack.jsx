@@ -4,7 +4,6 @@ import { techCategories, episodes } from "../data/content";
 import Reveal from "./Reveal";
 import { RevealGroup, RevealItem } from "./Reveal";
 import TiltCard from "./TiltCard";
-import FloatingShape from "./FloatingShape";
 
 const skillIcon = {
   "React.js": FaReact,
@@ -23,27 +22,6 @@ const skillIcon = {
 export default function TechStack() {
   return (
     <section id="skills" className="relative overflow-hidden bg-[#08070a] py-14 sm:py-20">
-      <FloatingShape
-        variant="diamond"
-        size={22}
-        color="#ef1a2c"
-        opacity={0.3}
-        duration={7}
-        drift={14}
-        style={{ top: "6%", left: "3%" }}
-        className="hidden md:block"
-      />
-      <FloatingShape
-        variant="circle"
-        size={16}
-        color="#a80d1d"
-        opacity={0.4}
-        duration={5.5}
-        delay={0.5}
-        drift={10}
-        style={{ bottom: "12%", right: "5%" }}
-        className="hidden md:block"
-      />
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal className="text-center sm:text-left">
           <span className="font-mono-tag inline-flex items-center gap-2 text-[11px] uppercase text-red-500">

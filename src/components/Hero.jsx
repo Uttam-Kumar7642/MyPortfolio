@@ -1,4 +1,3 @@
-import { Suspense, lazy } from "react";
 import {
   FiArrowUpRight,
   FiDownload,
@@ -12,8 +11,6 @@ import { profile, stats } from "../data/content";
 import TiltCard from "./TiltCard";
 import { RevealGroup, RevealItem } from "./Reveal";
 import Reveal from "./Reveal";
-
-const Scene3D = lazy(() => import("./Scene3D"));
 
 const iconMap = {
   briefcase: FaBriefcase,
@@ -115,9 +112,6 @@ export default function Hero() {
               aria-hidden
               className="absolute inset-6 -z-10 rounded-full bg-red-900/20 blur-2xl"
             />
-            <Suspense fallback={null}>
-              <Scene3D className="pointer-events-none absolute -inset-x-16 -inset-y-20 z-0 hidden sm:block" />
-            </Suspense>
             <span className="font-mono-tag absolute -top-3 left-3 z-20 rounded-sm bg-red-600 px-2.5 py-1 text-[9px] uppercase text-white shadow-lg">
               Featured Dev
             </span>

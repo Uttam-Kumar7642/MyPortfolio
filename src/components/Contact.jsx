@@ -1,7 +1,6 @@
 import { FiArrowUpRight, FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 import { profile, episodes } from "../data/content";
 import Reveal from "./Reveal";
-import FloatingShape from "./FloatingShape";
 
 export default function Contact() {
   return (
@@ -9,27 +8,6 @@ export default function Contact() {
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-[90%] max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-700/20 blur-[100px]"
-      />
-      <FloatingShape
-        variant="diamond"
-        size={26}
-        color="#ef1a2c"
-        opacity={0.35}
-        duration={7}
-        drift={16}
-        style={{ top: "12%", left: "8%" }}
-        className="hidden md:block"
-      />
-      <FloatingShape
-        variant="hexagon"
-        size={22}
-        color="#a80d1d"
-        opacity={0.3}
-        duration={6}
-        delay={0.9}
-        drift={12}
-        style={{ bottom: "14%", right: "8%" }}
-        className="hidden md:block"
       />
       <div className="relative mx-auto max-w-4xl px-5 text-center md:px-8">
         <Reveal>

@@ -2,21 +2,10 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { experience, episodes } from "../data/content";
 import Reveal from "./Reveal";
 import { RevealGroup, RevealItem } from "./Reveal";
-import FloatingShape from "./FloatingShape";
 
 export default function Experience() {
   return (
     <section id="experience" className="dot-grid relative overflow-hidden bg-[#0a090c] py-14 sm:py-20">
-      <FloatingShape
-        variant="hexagon"
-        size={26}
-        color="#ef1a2c"
-        opacity={0.3}
-        duration={7.5}
-        drift={14}
-        style={{ top: "10%", right: "4%" }}
-        className="hidden md:block"
-      />
       <div className="mx-auto max-w-4xl px-5 md:px-8">
         <Reveal className="text-center sm:text-left">
           <span className="font-mono-tag inline-flex items-center gap-2 text-[11px] uppercase text-red-500">

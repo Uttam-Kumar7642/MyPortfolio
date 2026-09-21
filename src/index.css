@@ -89,25 +89,12 @@ h1, h2, h3, h4, .font-display {
   .animate-pulse-glow {
     animation: pulse-glow 2.4s ease-in-out infinite;
   }
-
-  @keyframes float-bob {
-    0%, 100% {
-      transform: translateY(0) rotate(0deg);
-    }
-    50% {
-      transform: translateY(calc(var(--drift, 14px) * -1)) rotate(8deg);
-    }
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-up,
   .animate-pulse-glow {
     animation: none;
-  }
-
-  span[style*="float-bob"] {
-    animation: none !important;
   }
 }
 

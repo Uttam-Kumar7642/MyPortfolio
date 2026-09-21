@@ -9,7 +9,6 @@ import aboutIllustration from "../assets/about-character.jpeg";
 import { profile, bring, episodes } from "../data/content";
 import Reveal from "./Reveal";
 import TiltCard from "./TiltCard";
-import FloatingShape from "./FloatingShape";
 
 const facts = [
   { icon: FiMapPin, label: "Location", value: profile.location },
@@ -22,28 +21,6 @@ const facts = [
 export default function About() {
   return (
     <section id="about" className="dot-grid relative overflow-hidden bg-[#0a090c] py-14 sm:py-20">
-      <FloatingShape
-        variant="hexagon"
-        size={30}
-        color="#ef1a2c"
-        opacity={0.35}
-        duration={8}
-        drift={16}
-        style={{ top: "8%", right: "6%" }}
-        className="hidden md:block"
-      />
-      <FloatingShape
-        variant="diamond"
-        size={20}
-        color="#e8e6e3"
-        opacity={0.25}
-        duration={6.5}
-        delay={0.8}
-        drift={12}
-        outline
-        style={{ bottom: "10%", left: "4%" }}
-        className="hidden md:block"
-      />
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-12">
           <Reveal
